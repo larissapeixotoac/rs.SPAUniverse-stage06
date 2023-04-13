@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+img {
+    /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: 100%;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+}
+
+body {
+    color: white;
+
+    font-size: 1.8rem;
+    line-height: 160%;
+
+}
+
+body, button {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+    margin: 4rem 7.2rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: 2.16667rem;
+    line-height: 2.2rem;
+    color: #C4C4CC;
+}
+
+.home {
+    height: 100vh;
+    margin-top: -20rem;
+    display: grid;
+    place-content: center;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: clamp(3rem, 2.8rem + 2rem, 4.8rem);
+    line-height: 125%;
+
+    color: #E1E1E6;
+
+}
+
+.content h1 {
+    animation-duration: 3s;
+    animation-name: h1Slidein;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    
+    padding-left: clamp(3rem, 3rem + 5vw, 10.2rem);
+    padding-top: clamp(2rem, 2rem + 5vw, 6.3rem);
+}
+
+p {
+    width: min(64.8rem, 90%);
+    color: #E1E1E6;
+
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+.bold {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.2rem;
+}
+
+button {
+    border: none;
+    background-color:transparent;
+    margin: 2.4rem auto;
+
+}
+
+.textBtn {    
+    border: .2rem solid #FFFFFF;
+    border-radius: .5rem;
+    width: 19.5rem;
+    height: 4.8rem;
+    padding: 1.2rem 3.2rem;
+
+
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: white;    
+}
+
+.textBtn:hover {
+    background: #FFFFFF;
+    color: #02799D;
+
+    transition: .3s;
+}
+
+@keyframes slidein {
+    0% {
+        margin-left: 100%;
+        width: 200%;
+    }
+
+    100% {
+        margin-left: 0%;
+        width: 35%;
+    }
+}
+
+@keyframes h1Slidein {
+    0% {
+        margin-left: 100%;
+    }
+
+    100% {
+        margin-left: 0%;
+    }
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+    img {
+      left: 50%;
+      margin-left: -512px;   /* 50% */
+    }
+}
+
